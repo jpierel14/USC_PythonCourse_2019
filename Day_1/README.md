@@ -34,7 +34,9 @@ Typing is hard. Let the computer do it for you. Using the TAB key, especially wh
 - `cd/./../~` -- Change the directory
 
 . means current directory
+
 .. means one directory up
+
 ~ is $HOME. Shortcut to get back home is `cd` without options.
 
 - `pwd` -- Prints the working directory
