@@ -30,38 +30,49 @@ Typing is hard. Let the computer do it for you. Using the TAB key, especially wh
 
 
 #### Basic file system operations
-- `ls`
-- `pwd`
-- `cd/./..`
-- `mkdir`
-- `rm`
-- `echo`
-- `touch`
+- `ls` -- Lists the files in a directory
+- `cd/./../~` -- Change the directory
+
+. means current directory
+.. means one directory up
+~ is $HOME. Shortcut to get back home is `cd` without options.
+
+- `pwd` -- Prints the working directory
+- `mkdir` -- Make a new directory
+- `rm` -- Remove files or folders
+*** WARNINGS ***
+`-rf` -- remove and force
+This PERMANENTLY delete files. They will be gone forever. They are not stored in a trash/recycle bin.
+
+- `echo` -- Print to the screen
+
+Helpful in scripts or to check environment variables.
+
+- `touch` -- "touches" A file either updating it's modification date or creating it if it's not there
 
 #### Finding things
-- find
-- grep
-- history
+- `find`
+- `grep`
+- `history`
 
 #### Downloading Files
-- scp
-- wget/curl
+- `scp`
+- `wget/curl`
 
 #### Putting operations together
 - `> | <`
-- &&/;
+- `&&/;`
 
 #### Monitoring your system
-- top/htop
-
+- `top/htop`
+- `df/du`
 
 #### Environment Variables
-- .bashrc/.login
-- export
-- PATH -- order matters
-- PYTHONPATH
-- LD_LIBRARY_PATH -- talk about dynamic libraries `*.so/*.dyld`
-- DYLD_LIBRARY_PATH
+- `.bashrc/.login`
+- `export/setenv`
+- `PATH` -- order matters
+- `PYTHONPATH`
+- `LD_LIBRARY_PATH/DYLD_LIBRARY_PATH` -- talk about dynamic libraries `*.so/*.dyld`
 
 
 ## Git/Github
