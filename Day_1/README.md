@@ -24,7 +24,7 @@ Before starting to use the command line there are a few important keys to help y
 
 This is the ultimate end key. If your program is running too long, outputting too much to the screen, or running into errors, you can use ctrl-C to stop it.
 
-- TAB
+- <kbd>TAB</kbd>
 
 Typing is hard. Let the computer do it for you. Using the TAB key, especially when navigating the filesystem, can help. Just start typing the beginning of the folder, file or program that you want to use, then hit the TAB key, the computer will try to guess what you are doing and fill in the rest. If the computer doesn't know what you want hitting the TAB key multiple times often gives you more options to choose from.
 
