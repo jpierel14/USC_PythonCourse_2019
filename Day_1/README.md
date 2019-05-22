@@ -14,15 +14,18 @@
 
 ## Unix Commands
 
-These tutorials are based on using bash/zsh/sh as the shell. Most will work with different shells like csh/tcsh but your millage may vary. You can check the shell you are using by opening a terminal and running `echo $0`.
+These tutorials are based on using `bash/zsh/sh` as the shell. Most will work with different shells like `csh/tcsh` but your millage may vary. You can check the shell you are using by opening a terminal and running `echo $0`.
 
 #### Important keys
 
 Before starting to use the command line there are a few important keys to help you on your journey.
-- ctrl-C
+
+- <kbd>CTRL</kbd>+<kbd>C</kbd>
+
 This is the ultimate end key. If your program is running too long, outputting too much to the screen, or running into errors, you can use ctrl-C to stop it.
 
 - TAB
+
 Typing is hard. Let the computer do it for you. Using the TAB key, especially when navigating the filesystem, can help. Just start typing the beginning of the folder, file or program that you want to use, then hit the TAB key, the computer will try to guess what you are doing and fill in the rest. If the computer doesn't know what you want hitting the TAB key multiple times often gives you more options to choose from.
 
 
