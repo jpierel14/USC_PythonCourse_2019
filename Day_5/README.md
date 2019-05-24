@@ -21,6 +21,8 @@ str.split() #split a string by delimeter into an array of strings
 int(string_instance) #cast a string to a number such that math can be done upon it
 ```
 
+All code made in the first example will be forced to be commited through git, and be tested through a test driven development mindset. TODO -> decide if we want the class to write any of their own tests for this example, or purely rely upon the provided tests when coding. 
+
 ## (Example 2) Class Inheritance Trap
 ### Class is split into 2 groups
 
@@ -32,6 +34,12 @@ will be given already working equivalent code which they have not seen before, w
 
 
 Both groups in the class will race to accomplish the creation of a ```vehiclemerge``` function routine given their own paradigm. After both groups have the code working, they will be given 10 minutes to refactor the code such that they feel it is the most easily added onto afterwards. Then the groups will be given an unknown task they cannot prepare for, and race to see who can add functionality fastest with the different paradigm. It should become obvious that in this particular example, using class inheritance and class instances is both slower, and harder to maintain than using objects with static functions. 
+
+
+## (Example 3) Job Security and the Scavenger Hunt
+For this example, the class will be given working code which accomplishes a simple task and then be forced to debug it, and add functionality to it. The instructors will trap the students into finding the code very difficult to fix. 
+
+
 
 
 
