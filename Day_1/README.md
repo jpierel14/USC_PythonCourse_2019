@@ -16,65 +16,72 @@
 
 These tutorials are based on using `bash/zsh/sh` as the shell. Most will work with different shells like `csh/tcsh` but your millage may vary. You can check the shell you are using by opening a terminal and running `echo $0`.
 
-#### Important keys
+#### Important Information
 
-Before starting to use the command line there are a few important keys to help you on your journey.
-
-- <kbd>CTRL</kbd>+<kbd>C</kbd>
-
-This is the ultimate end key. If your program is running too long, outputting too much to the screen, or running into errors, you can use ctrl-C to stop it.
-
-- <kbd>TAB</kbd>
-
-Typing is hard. Let the computer do it for you. Using the TAB key, especially when navigating the filesystem, can help. Just start typing the beginning of the folder, file or program that you want to use, then hit the TAB key, the computer will try to guess what you are doing and fill in the rest. If the computer doesn't know what you want hitting the TAB key multiple times often gives you more options to choose from.
+| Keys and Unix Definitions   | Description                                     |
+| -----------                 | -----------                                     |
+|<kbd>CTRL</kbd>+<kbd>C</kbd> | Kills the running program, use if the program is running too long, outputting too much text to the screen, or running into errors. |
+|<kbd>TAB</kbd>               | Using the TAB key, especially when navigating the filesystem, can help. Just start typing the beginning of the folder, file or program that you want to use, then hit the TAB key, the computer will try to guess what you are doing and fill in the rest. If the computer doesn't know what you want hitting the TAB key multiple times often gives you more options to choose from. |
+| `.`                         | Current directory                               |
+| `..`                        | Directory one up in the structure               |
+| `~`                         | $HOME directoy, on linux /home/<username>, on mac /Users/<username> |
 
 
 #### Basic file system operations
-- `ls` -- Lists the files in a directory
-- `cd/./../~` -- Change the directory
 
-. means current directory
-
-.. means one directory up
-
-~ is $HOME. Shortcut to get back home is `cd` without options.
-
-- `pwd` -- Prints the working directory
-- `mkdir` -- Make a new directory
-- `rm` -- Remove files or folders
-*** WARNINGS ***
-`-rf` -- remove and force
-This PERMANENTLY delete files. They will be gone forever. They are not stored in a trash/recycle bin.
-
-- `echo` -- Print to the screen
-
-Helpful in scripts or to check environment variables.
-
-- `touch` -- "touches" A file either updating it's modification date or creating it if it's not there
+| Command               |  Description                                          |
+| -----------           | -----------                                           |
+| `ls`                  | list files in a directory                             |
+| `cd <folder_name>`    | change directory into folder_name                     |
+| `cd ..`               | move up one folder in directory structure             |
+| `cd` or `cd ~`        | change directory into the $HOME folder of the user    |
+|`pwd`                  | Prints the working directory                          |
+| `mkdir <directoy>`    |  Make a new directory                                 |
+| `rm <file_name>`      | Remove file *** WARNINGS *** They will be gone forever. They are not stored in a trash/recycle bin. |
+| `rm -r <folder_name>` | Remove folder *** WARNINGS *** They will be gone forever. They are not stored in a trash/recycle bin. |
+| `echo <variable>`     | Prints the variable to the screen                     |
+| `touch`               | "touches" A file either updating it's modification date or creating it if it's not there. |
 
 #### Finding things
-- `find`
-- `grep`
-- `history`
+| Command               |  Description                                          |
+| -----------           | -----------                                           |
+|  `find`               | |
+|  `grep`               | |
+|  `history`            | |
 
 #### Downloading Files
-- `scp`
-- `wget/curl`
+| Command               |  Description                                          |
+| -----------           | -----------                                           |
+| `scp`                 | |
+| `wget`                | |
+| `curl`                | |
 
 #### Putting operations together
-- `> | <`
-- `&&/;`
+| Command               |  Description                                          |
+| -----------           | -----------                                           |
+| `>`                   | |
+| `|`                   | |
+| `<`                   | |
+| `&&`                  | |
+| `;`                   | |
 
 #### Monitoring your system
-- `top/htop`
-- `df/du`
+| Command               |  Description                                          |
+| -----------           | -----------                                           |
+| `top`                 | |
+| `htop`                | |
+| `df`                  | |
+| `du`                  | |
 
 #### Environment Variables
-- `.bashrc/.login`
-- `export/setenv`
-- `PATH` -- order matters
-- `PYTHONPATH`
-- `LD_LIBRARY_PATH/DYLD_LIBRARY_PATH` -- talk about dynamic libraries `*.so/*.dyld`
+
+| Command                         |  Description                                |
+| -----------                     | -----------                                 |
+| `.bashrc` `.cshrc` `.login`     | |
+| `export` `setenv`               | |
+| `PATH`                          | |
+| `PYTHONPATH`                    | |
+| `LD_LIBRARY_PATH` `DYLD_LIBRARY_PATH` | -- talk about dynamic libraries `*.so/*.dyld` |
 
 
 ## Git/Github
