@@ -24,7 +24,7 @@ These tutorials are based on using `bash/zsh/sh` as the shell. Most will work wi
 |<kbd>TAB</kbd>               | Using the TAB key, especially when navigating the filesystem, can help. Just start typing the beginning of the folder, file or program that you want to use, then hit the TAB key, the computer will try to guess what you are doing and fill in the rest. If the computer doesn't know what you want hitting the TAB key multiple times often gives you more options to choose from. |
 | `.`                         | Current directory                               |
 | `..`                        | Directory one up in the structure               |
-| `~`                         | $HOME directoy, on linux /home/<username>, on mac /Users/<username> |
+| `~`                         | $HOME directoy, on linux `/home/<username>`, on mac `/Users/<username>` |
 
 
 #### Basic file system operations
@@ -37,8 +37,8 @@ These tutorials are based on using `bash/zsh/sh` as the shell. Most will work wi
 | `cd` or `cd ~`        | change directory into the $HOME folder of the user    |
 |`pwd`                  | Prints the working directory                          |
 | `mkdir <directoy>`    |  Make a new directory                                 |
-| `rm <file_name>`      | Remove file *** WARNINGS *** They will be gone forever. They are not stored in a trash/recycle bin. |
-| `rm -r <folder_name>` | Remove folder *** WARNINGS *** They will be gone forever. They are not stored in a trash/recycle bin. |
+| `rm <file_name>`      | *** WARNING ***<br>Removes file. They will be gone forever.<br>They are not stored in a trash/recycle bin. |
+| `rm -r <folder_name>` | *** WARNING ***<br>Removes folder. They will be gone forever.<br>They are not stored in a trash/recycle bin. |
 | `echo <variable>`     | Prints the variable to the screen                     |
 | `touch`               | "touches" A file either updating it's modification date or creating it if it's not there. |
 
@@ -52,18 +52,18 @@ These tutorials are based on using `bash/zsh/sh` as the shell. Most will work wi
 #### Downloading Files
 | Command               |  Description                                          |
 | -----------           | -----------                                           |
-| `scp`                 | |
-| `wget`                | |
-| `curl`                | |
+| `scp <username>@<hostname_ipaddress>:</path/to/file/download.tar.gz>`       | |
+| `wget <url_to_download>` | |
+| `curl <url_to_download>` | |
 
 #### Putting operations together
-| Command               |  Description                                          |
-| -----------           | -----------                                           |
-| `>`                   | |
-| `|`                   | |
-| `<`                   | |
-| `&&`                  | |
-| `;`                   | |
+| Command               |  Description |  Example       |
+| -----------           | -----------  | -----------    |
+| `>`                   | | |
+| `\|`                  | | |
+| `<`                   | | |
+| `&&`                  | | |
+| `;`                   | | |
 
 #### Monitoring your system
 | Command               |  Description                                          |
