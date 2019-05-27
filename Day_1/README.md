@@ -43,27 +43,27 @@ These tutorials are based on using `bash/zsh/sh` as the shell. Most will work wi
 | `touch`               | "touches" A file either updating it's modification date or creating it if it's not there. |
 
 #### Finding things
-| Command               |  Description                                          |
-| -----------           | -----------                                           |
-|  `find`               | |
-|  `grep`               | |
-|  `history`            | |
+| Command               |  Description  | Examples    |
+| -----------           | -----------   | ----------- |
+|  `find <path> <options> <pattern> <functions>` | Finds files in the path and can also execute functions on each file. | Find all .csv files that are less and 100kb and delete: <br> `find . -name '*.csv' -size -100kb -delete`|
+|  `grep <pattern> <file`<br>`cat file | grep <pattern>` | Searches through a file to find a sting. | Find "error" in a logfile:<br>`grep "error" file.log`|
 
 #### Downloading Files
 | Command               |  Description                                          |
 | -----------           | -----------                                           |
-| `scp <username>@<hostname_ipaddress>:</path/to/file/download.tar.gz>`       | |
-| `wget <url_to_download>` | |
-| `curl <url_to_download>` | |
+| `scp <username>@<hostname_ipaddress>:</path/to/file/download.tar.gz> <destination>` | Copy files from one computer to another over ssh |
+| `wget <url_to_download>` | Downloads files from the internet |
+| `curl <url_to_download>` | Downloads files from the internet |
 
 #### Putting operations together
-| Command               |  Description |  Example       |
-| -----------           | -----------  | -----------    |
-| `>`                   | | |
-| `\|`                  | | |
-| `<`                   | | |
-| `&&`                  | | |
-| `;`                   | | |
+| Command               |  Description |  Examples |
+| :-----------          | :----------- | :-----------    |
+| `>`                   | <b>Redirection operator</b><br>Takes the output of one program and redirects to another program or file.| Takes just the first 100 lines from file and copied them to shorter_file:<br>`head -n100 file.csv > shorter_file.csv`<br>Save output of a program to a log file instead or printing:<br>`./myProgram > myProgram.log`|
+| `\|`                  | <b>Pipe operator</b><br>Streams the output of one program to another program| Find all the unique values in a file:<br>`cat file.txt \| sort \| uniq`<br>Find the word "error" in your programs log:<br> `./myProgram \| grep "error"` |
+| `<`                   | <b>Redirection operator</b><br>Takes a file and redirects to the input of a program.| `./myProgram < config.txt`|
+| `;`                   | <b>Command separator</b> <br>Separates between commands running one after another.| `./myProgram > myProgram.log; grep "error" myProgram.log` |
+| `&&`                  | <b>Logical And</b><br>Can also be used to separates between commands running one after another except only if the first command runs properly.  | `./task1 && ./task2` |
+
 
 #### Monitoring your system
 | Command               |  Description                                          |
