@@ -80,14 +80,14 @@ ____
 ### Friday Morning (10am - noon)
 * 10:00  Overview of the day, group assignments
 * 10:15  Brief lecture and Q&A on Programming Practice
-* 10:30  
+* 10:35  carry on with data + fitting challenges  
 * _11:00 coffee break_
 * 11:15  
 
 #### 12:30 - 1:30 Go get lunch.   
 * (eat in the Astro Center if you want)
 
-### Fridany Afternoon (1:30 - 3:30pm)
+### Friday Afternoon (1:30 - 3:30pm)
 * 1:30   
 * _2:30   break_
 * 2:45   
