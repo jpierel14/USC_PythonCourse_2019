@@ -1,15 +1,58 @@
 # Day 1 (The Basics)
 
-## Installation/Python intro
+## Git/Github
 
-## Programming Basic Terms:
+All the instructions will use GitHub as the online repository but there are a few different options for hosting your git projects on the web. Other popular git websites are gitlab and bitbucket. All the instructions work the same no matter where your git repository is hosted.
 
-- Variable
-- List
-- Dictionary
-- Class
-- Comprehension
-- ...
+#### Basic git terms (https://help.github.com/en/articles/github-glossary)
+| Term                            |  Description                                |
+| -----------                     | -----------                                 |
+| repository | A repository is the most basic element of GitHub. They're easiest to imagine as a project's folder. A repository contains all of the project files (including documentation), and stores each file's revision history. Repositories can have multiple collaborators and can be either public or private. |
+| branch | A branch is a parallel version of a repository. It is contained within the repository, but does not affect the primary or `master` branch allowing you to work freely without disrupting the "live" version. When you've made the changes you want to make, you can merge your branch back into the `master` branch to publish your changes. |
+| push | Pushing refers to sending your committed changes to a remote repository, such as a repository hosted on GitHub. For instance, if you change something locally, you'd want to then push those changes so that others may access them. |
+| pull | Pull refers to when you are fetching in changes and merging them. For instance, if someone has edited the remote file you're both working on, you'll want to pull in those changes to your local copy so that it's up to date. |
+| commit | A commit, or "revision", is an individual change to a file (or set of files). It's like when you save a file, except with Git, every time you save it creates a unique ID (a.k.a. the "SHA" or "hash") that allows you to keep record of what changes were made when and by who. Commits usually contain a commit message which is a brief description of what changes were made. |
+| clone | A clone is a copy of a repository that lives on your computer instead of on a website's server somewhere, or the act of making that copy. With your clone you can edit the files in your preferred editor and use Git to keep track of your changes without having to be online. It is, however, connected to the remote version so that changes can be synced between the two. You can push your local changes to the remote to keep them synced when you're online. |
+| fork | A fork is a personal copy of another user's repository that lives on your account. Forks allow you to freely make changes to a project without affecting the original. Forks remain attached to the original, allowing you to submit a pull request to the original's author to update with your changes. You can also keep your fork up to date by pulling in updates from the original. |
+| pull request | Pull requests are proposed changes to a repository submitted by a user and accepted or rejected by a repository's collaborators. Like issues, pull requests each have their own discussion forum. |
+
+#### GitHub Desktop workflow:
+
+1) Start by deciding what you want to work on. If you want to start your own project create a repository. If you want to work on code written by another person, find the code on GitHub and <b>fork</b> it to make a copy for yourself and clone the forked repository.
+<br><img src="git_desktop_fork.png" width="75%" height="75%">
+
+2) Work on your code in the newly cloned folder using your favorite editor.
+
+3) See the changes you made on GitHub Desktop.
+<br><img src="git_desktop_changes.png" width="75%" height="75%">
+
+
+4) Commit the changes. These are still just on your own local git copy and are not yet saved to GitHub.
+<br><img src="git_desktop_commit.png" width="75%" height="75%">
+
+5) Push the changes to your online GitHub account.
+<br><img src="git_desktop_push.png" width="75%" height="75%">
+
+6) If you're working from a <b>fork</b> of another repository you can then go online and make a pull request to have your changes added.
+
+#### Basic git command line workflow:
+1) Start by deciding what you want to work on. If you want to start your own project go to GitHub and create a repository. If you want to work on code written by another person, find the code on GitHub and <b>fork</b> it to make a copy for yourself.
+
+2) Now <b>clone</b> that repository onto your own computer to start working (`git clone git@github.com:<username>/<repository>.git`). It's recommended to clone with ssh to avoid using your username and password to push/pull to GitHub. You can add ssh keys using these [steps](https://help.github.com/en/enterprise/2.15/user/articles/adding-a-new-ssh-key-to-your-github-account).
+
+3) Work on your code in the newly cloned folder using your favorite editor.
+
+4) Check what git has seen you modify by using: `git status`<br><img src="git_status.png" width="75%" height="75%">
+
+5) See what you have changed in the file from the previous version: `git diff file.py`<br><img src="git_diff.png" width="75%" height="75%">
+
+6) Add the files so that git will track them: `git add file.py` You can see that is was added by checking the status again.<br><img src="git_add.png" width="75%" height="75%">
+
+7) Now add the changes. `git commit -m "Some message describing what you added or modified."` These are still just on your own local git copy and are not yet saved to GitHub.<br><img src="git_commit.png" width="75%" height="75%">
+
+8) Add the changes to the online GitHub repository: `git push`<br><img src="git_push.png" width="75%" height="75%">
+
+9) If you're working from a <b>fork</b> of another repository you can then go online and make a pull request to have your changes added.
 
 
 ## Unix Commands
@@ -82,40 +125,3 @@ These tutorials are based on using `bash/zsh/sh` as the shell. Most will work wi
 | `$PATH`                          | The places, in order, that your computer will look for programs run from the shell. |
 | `$PYTHONPATH`                    | The places, in order, that python will look for python libraries run from the shell. |
 | `$LD_LIBRARY_PATH`<br>`$DYLD_LIBRARY_PATH` | The places, in order, that all programs will look for libraries (Eg. `*.so/*.dyld` files) run from the shell. |
-
-
-## Git/Github
-
-All the instructions will use GitHub as the online repository but there are a few different options for hosting your git projects on the web. Other popular git websites are gitlab and bitbucket. All the instructions work the same no matter where your git repository is hosted.
-
-#### Basic git terms (https://help.github.com/en/articles/github-glossary)
-| Term                            |  Description                                |
-| -----------                     | -----------                                 |
-| repository | A repository is the most basic element of GitHub. They're easiest to imagine as a project's folder. A repository contains all of the project files (including documentation), and stores each file's revision history. Repositories can have multiple collaborators and can be either public or private. |
-| branch | A branch is a parallel version of a repository. It is contained within the repository, but does not affect the primary or `master` branch allowing you to work freely without disrupting the "live" version. When you've made the changes you want to make, you can merge your branch back into the `master` branch to publish your changes. |
-| push | Pushing refers to sending your committed changes to a remote repository, such as a repository hosted on GitHub. For instance, if you change something locally, you'd want to then push those changes so that others may access them. |
-| pull | Pull refers to when you are fetching in changes and merging them. For instance, if someone has edited the remote file you're both working on, you'll want to pull in those changes to your local copy so that it's up to date. |
-| commit | A commit, or "revision", is an individual change to a file (or set of files). It's like when you save a file, except with Git, every time you save it creates a unique ID (a.k.a. the "SHA" or "hash") that allows you to keep record of what changes were made when and by who. Commits usually contain a commit message which is a brief description of what changes were made. |
-| clone | A clone is a copy of a repository that lives on your computer instead of on a website's server somewhere, or the act of making that copy. With your clone you can edit the files in your preferred editor and use Git to keep track of your changes without having to be online. It is, however, connected to the remote version so that changes can be synced between the two. You can push your local changes to the remote to keep them synced when you're online. |
-| fork | A fork is a personal copy of another user's repository that lives on your account. Forks allow you to freely make changes to a project without affecting the original. Forks remain attached to the original, allowing you to submit a pull request to the original's author to update with your changes. You can also keep your fork up to date by pulling in updates from the original. |
-| pull request | Pull requests are proposed changes to a repository submitted by a user and accepted or rejected by a repository's collaborators. Like issues, pull requests each have their own discussion forum. |
-
-
-#### Basic git workflow:
-1) Start by deciding what you want to work on. If you want to start your own project go to GitHub and create a repository. If you want to work on code written by another person, find the code on GitHub and <b>fork</b> it to make a copy for yourself.
-
-2) Now <b>clone</b> that repository onto your own computer to start working (`git clone git@github.com:<username>/<repository>.git`). It's recommended to clone with ssh to avoid using your username and password to push/pull to GitHub. You can add ssh keys using these [steps](https://help.github.com/en/enterprise/2.15/user/articles/adding-a-new-ssh-key-to-your-github-account).
-
-3) Work on your code in the newly cloned folder using your favorite editor.
-
-4) Check what git has seen you modify by using: `git status`<br><img src="git_status.png" width="75%" height="75%">
-
-5) See what you have changed in the file from the previous version: `git diff file.py`<br><img src="git_diff.png" width="75%" height="75%">
-
-6) Add the files so that git will track them: `git add file.py` You can see that is was added by checking the status again.<br><img src="git_add.png" width="75%" height="75%">
-
-7) Now add the changes. `git commit -m "Some message describing what you added or modified."`<br><img src="git_commit.png" width="75%" height="75%"><br>These are still just on your own local git copy and are not yet saved to GitHub.
-
-8) Add the changes to the online GitHub repository: `git push`<br><img src="git_push.png" width="75%" height="75%">
-
-9) If you're working from a <b>fork</b> of another repository you can then go online and make a pull request to have your changes added.
